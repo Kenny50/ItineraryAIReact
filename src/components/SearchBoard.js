@@ -57,7 +57,7 @@ export default function SearchBoard({ setItinerary }) {
 
                     <button style={{ marginTop: "10px" }} type='submit' disabled={loading}>Sent</button>
                     <div>
-                        {loading ? <p>Loading... Ai might take around 30 seconds...</p> : <p>Itinerary generated!</p>}
+                        {loading ? <p style={{ color: "red" }}>Loading... Ai might take around 30 seconds...</p> : <p>Itinerary generated!</p>}
                     </div>
                 </Form>
             </SearchBoardContainer>

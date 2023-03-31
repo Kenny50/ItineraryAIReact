@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "http://localhost:3020";
+const baseUrl = process.env.BASE_URL || 'http://54.180.9.103:3020';
 
 export function getAllItinerary(setData) {
     axios
@@ -56,7 +56,7 @@ export function generateItineraryFromAI(formData){
 
 export function registerMail(formData){
     axios.post(
-        baseUrl + '',
+        baseUrl + '/add-mail',
         formData
     )
 }
