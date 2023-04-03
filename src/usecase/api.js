@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = process.env.BASE_URL || 'http://54.180.9.103:3020';
+const baseUrl = process.env.BASE_URL || 'https://itineraryai.com/api';
 
 export function getAllItinerary(setData) {
     axios
