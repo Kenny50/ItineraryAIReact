@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = process.env.BASE_URL || 'https://itineraryai.com/api';
+const baseUrl = process.env.REACT_APP_BASE_URL;
 
 export function getAllItinerary(setData) {
     axios
