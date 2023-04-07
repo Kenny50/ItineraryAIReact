@@ -3,16 +3,11 @@ import Tag from "../components/Tag";
 import { FlexListItem, FlexList } from "../components/styled/FlexItems";
 import { Link } from "react-router-dom";
 import { getAllTag } from '../usecase/api';
+import SEO from "../components/SEO";
 
 //page has all tags
 export default function Tags() {
-    const [tags, setTags] = useState([
-        // { tag: "Historical", id: 0 },
-        // { tag: "Shopping", id: 1 },
-        // { tag: "Outdoor", id: 2 },
-        // { tag: "Cuisine", id: 3 },
-        // { tag: "Culture", id: 4 },
-    ]);
+    const [tags, setTags] = useState([]);
 
     useEffect(()=> {
         getAllTag(setTags);
@@ -21,6 +16,9 @@ export default function Tags() {
     //layout flex
     return (
         <div>
+            <SEO
+                title={`Itineraries by tags`}
+                description={"Get itineraries in differernt tags"}/>
             <h1>Tags</h1>
 
             <FlexList>
